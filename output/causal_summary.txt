@@ -1,0 +1,301 @@
+======================================================================
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+PROBABILISTIC REVENUE FORECAST — CAUSAL SUMMARY
+=
+Training Data: 2024-01-01 to 2026-06-05
+Channels: bing, google, meta
+Total Forecast Rows: 177
+
+## EXECUTIVE SUMMARY
+
+  30-Day Forecast:
+    Expected Revenue (P50): $59,276
+    Optimistic Range (P90): $88,979
+    Conservative Range (P10): $49,655
+    Projected Spend: $70,202
+    Blended ROAS: 0.84x
+  60-Day Forecast:
+    Expected Revenue (P50): $118,552
+    Optimistic Range (P90): $177,958
+    Conservative Range (P10): $99,309
+    Projected Spend: $138,407
+    Blended ROAS: 0.86x
+  90-Day Forecast:
+    Expected Revenue (P50): $177,828
+    Optimistic Range (P90): $266,937
+    Conservative Range (P10): $148,964
+    Projected Spend: $186,755
+    Blended ROAS: 0.95x
+
+## KEY REVENUE DRIVERS
+
+  Top 10 features driving revenue predictions:
+
+     1. roas                           ( 12.1% importance) — Historical return on ad spend (revenue per dollar spent)
+     2. spend                          ( 11.1% importance) — Daily advertising expenditure
+     3. clicks                         (  7.6% importance) — Number of ad clicks received
+     4. revenue_roll_7d_mean           (  6.0% importance) — Average daily revenue over 7d window
+     5. revenue_roll_7d_std            (  4.2% importance) — Revenue volatility over 7d window
+     6. clicks_roll_7d_mean            (  3.9% importance) — Average daily clicks over 7d window
+     7. cpc                            (  3.8% importance) — Cost per click (spend efficiency)
+     8. cvr                            (  3.7% importance) — Conversion rate (conversions per click)
+     9. spend_roll_14d_mean            (  3.4% importance) — Average daily spend over 14d window
+    10. spend_roll_7d_mean             (  3.1% importance) — Average daily spend over 7d window
+
+  Causal Interpretation:
+    Revenue is primarily driven by roas, spend, and clicks. 
+    The strong influence of ROAS metrics suggests that campaigns with historically efficient ad spend are the best predictors of future revenue.
+    Spend level is a significant driver, indicating that budget allocation directly impacts revenue outcomes.
+
+## CHANNEL PERFORMANCE ANALYSIS
+
+  GOOGLE
+    30-Day P50 Revenue: $57,330 (97% of total)
+    Revenue Range: $49,135 — $83,205
+    ROAS (P50): 0.98x
+    Projected Spend: $58,264
+    Forecast Uncertainty: ±59%
+    Assessment: MARGINAL — close to break-even
+
+  META
+    30-Day P50 Revenue: $1,946 (3% of total)
+    Revenue Range: $520 — $4,944
+    ROAS (P50): 0.24x
+    Projected Spend: $8,234
+    Forecast Uncertainty: ±227%
+    Assessment: UNDERPERFORMING — low return on spend
+
+  BING
+    30-Day P50 Revenue: $0 (0% of total)
+    Revenue Range: $0 — $829
+    ROAS (P50): 0.00x
+    Projected Spend: $3,704
+    Forecast Uncertainty: ±0%
+    Assessment: UNDERPERFORMING — low return on spend
+
+
+## CAMPAIGN TYPE ANALYSIS
+
+  30-Day Revenue Forecast by Campaign Type:
+
+  Campaign Type             Channel     P50 Revenue     ROAS     Risk
+  -----------------------------------------------------------------
+  PERFORMANCE_MAX           google     $    18,202    0.59x     MED
+  SEARCH                    google     $    12,975    0.79x    HIGH
+  SHOPPING                  google     $    11,895    1.09x     LOW
+  SHOPPING                  bing       $     6,144  394.92x    HIGH
+  PROSPECTING               meta       $     1,749    0.34x     LOW
+  SEARCH                    bing       $     1,303    0.58x     LOW
+  REMARKETING               meta       $     1,167    0.38x     MED
+  PERFORMANCE_MAX           bing       $         5    0.00x    HIGH
+
+  Top Performer: PERFORMANCE_MAX (google) — $18,202 revenue, 0.59x ROAS
+  Lowest Revenue: PERFORMANCE_MAX (bing) — $5 revenue, 0.00x ROAS
+
+## FORECAST HORIZON TRENDS
+
+  30-Day: Total P50 = $59,276 (~$59,276/month), Spend = $70,202
+  60-Day: Total P50 = $118,552 (~$59,276/month), Spend = $138,407
+  90-Day: Total P50 = $177,828 (~$59,276/month), Spend = $186,755
+
+  Trend: STABLE — monthly revenue expected to remain roughly flat over 90 days
+
+## BUDGET EFFICIENCY ANALYSIS
+
+  Channel Efficiency (30-Day Horizon):
+
+  GOOGLE
+    Historical Daily Revenue: $10,114
+    Historical Daily Spend: $1,942
+    Historical ROAS: 5.21x
+    Forecast P50 ROAS: 0.98x
+    Outlook: DECLINING — forecast ROAS below historical
+
+  META
+    Historical Daily Revenue: $1,447
+    Historical Daily Spend: $274
+    Historical ROAS: 5.27x
+    Forecast P50 ROAS: 0.24x
+    Outlook: DECLINING — forecast ROAS below historical
+
+  BING
+    Historical Daily Revenue: $203
+    Historical Daily Spend: $123
+    Historical ROAS: 1.65x
+    Forecast P50 ROAS: 0.00x
+    Outlook: DECLINING — forecast ROAS below historical
+
+
+## RISK ASSESSMENT
+
+  HIGH UNCERTAINTY CAMPAIGNS (7 identified):
+
+    - Pmax_NTM_Campaign_12 (google): P10=$0, P50=$5, P90=$222 (±4852%)
+    - Pmax_NTM_Campaign_41 (google): P10=$2, P50=$33, P90=$1,263 (±3860%)
+    - Pmax_NTM_Campaign_01 (google): P10=$0, P50=$3, P90=$22 (±818%)
+    - Pmax_NTM_Campaign_14 (google): P10=$593, P50=$889, P90=$2,771 (±245%)
+    - Remarketing_DPA_Campaign_01 (meta): P10=$38, P50=$151, P90=$393 (±235%)
+
+  ZERO-REVENUE CAMPAIGNS (13 identified):
+    These campaigns show zero median revenue forecast:
+    - Pmax_NTM_Campaign_01 (bing, PERFORMANCE_MAX): Spend=$854
+    - Pmax_NTM_Campaign_03 (bing, PERFORMANCE_MAX): Spend=$760
+    - Search_TM_Campaign_02 (bing, SEARCH): Spend=$1,107
+    - Pmax_NTM_Campaign_10 (google, PERFORMANCE_MAX): Spend=$1,016
+    - Pmax_NTM_Campaign_19 (google, PERFORMANCE_MAX): Spend=$2,076
+    - Search_NTM_Campaign_03 (google, SEARCH): Spend=$687
+    - Search_NTM_Campaign_13 (google, SEARCH): Spend=$1,398
+    - Search_NTM_Campaign_14 (google, SEARCH): Spend=$2,197
+    - Search_NTM_Campaign_15 (google, SEARCH): Spend=$3,889
+    - Search_NTM_Campaign_16 (google, SEARCH): Spend=$185
+    - Search_NTM_Campaign_17 (google, SEARCH): Spend=$3,007
+    - Shopping_NTM_Campaign_02 (google, SHOPPING): Spend=$1,573
+    - Prospecting_Brand_Campaign_01 (meta, PROSPECTING): Spend=$2,499
+
+## ACTIONABLE RECOMMENDATIONS
+
+  1. BUDGET REALLOCATION: Consider shifting budget from bing (ROAS: 0.00x) to google (ROAS: 0.98x) to improve overall portfolio ROAS.
+  2. CAMPAIGN PRUNING: 13 campaigns have zero median revenue forecast but $21,248 in projected spend. Review these campaigns for potential pause or restructuring.
+  3. DATA QUALITY: 16 campaigns have forecast uncertainty exceeding 150%. Collecting more data or adding conversion tracking may improve prediction confidence.
+  4. SCENARIO PLANNING: Run the prediction pipeline with --budget-multiplier 1.2 and 0.8 to model the impact of ±20% budget changes on forecasted revenue.
+
+======================================================================
+End of Causal Summary Report
+======================================================================

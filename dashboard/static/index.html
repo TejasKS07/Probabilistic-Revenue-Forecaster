@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forecast Pro — Revenue &amp; ROAS Forecast</title>
+    <meta name="description" content="Enterprise probabilistic revenue and ROAS forecasting dashboard with budget simulation">
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <div class="app-layout">
+
+        <!-- ===== SIDEBAR ===== -->
+        <aside class="sidebar">
+            <div class="sidebar__brand">
+                <div class="sidebar__brand-name">Forecast Pro</div>
+                <div class="sidebar__brand-sub">Enterprise Analytics</div>
+            </div>
+
+            <nav class="sidebar__nav">
+                <a class="sidebar__link sidebar__link--active" data-page="dashboard">
+                    <span class="icon">📊</span> Dashboard
+                </a>
+                <a class="sidebar__link" data-page="datasources">
+                    <span class="icon">📁</span> Data Sources
+                </a>
+                <a class="sidebar__link" data-page="models">
+                    <span class="icon">📈</span> Models
+                </a>
+                <a class="sidebar__link" data-page="alerts">
+                    <span class="icon">⚠️</span> Alerts
+                </a>
+            </nav>
+
+            <div class="sidebar__footer">
+                <a class="sidebar__link" data-page="settings">
+                    <span class="icon">⚙️</span> Settings
+                </a>
+                <a class="sidebar__link" data-page="help">
+                    <span class="icon">❓</span> Help &amp; Docs
+                </a>
+            </div>
+        </aside>
+
+        <!-- ===== MAIN CONTENT ===== -->
+        <main class="main-content">
+
+            <!-- Page Header -->
+            <div class="page-header">
+                <div>
+                    <h1 class="page-header__title">Revenue &amp; ROAS Forecast</h1>
+                    <p class="page-header__sub" id="page-subtitle">Q2 2026 Projections</p>
+                </div>
+                <div class="horizon-pills">
+                    <span class="horizon-pills__label">Historical Period:</span>
+                    <button class="horizon-pill horizon-pill--active" data-horizon="30">30d</button>
+                    <button class="horizon-pill" data-horizon="60">60d</button>
+                    <button class="horizon-pill" data-horizon="90">90d</button>
+                </div>
+            </div>
+
+            <!-- ===== SECTION 1: Data Ingestion & Validation ===== -->
+            <div class="card" id="ingestion-card">
+                <h2 class="card__title">Data Ingestion &amp; Validation</h2>
+                <div class="ingestion-grid">
+                    <!-- Upload Zone -->
+                    <div class="upload-zone" id="upload-zone">
+                        <div class="upload-zone__icon">☁️</div>
+                        <div class="upload-zone__title">Upload Channel Data</div>
+                        <div class="upload-zone__sub">Drag &amp; drop CSV files or click to browse</div>
+                        <button class="upload-zone__btn" id="btn-select-files">Select Files</button>
+                        <input type="file" id="file-input" multiple accept=".csv" style="display:none">
+                    </div>
+
+                    <!-- Validation Status -->
+                    <div class="validation-status" id="validation-status">
+                        <div class="validation-status__title">Validation Status</div>
+
+                        <div class="validation-item">
+                            <div class="validation-item__icon validation-item__icon--ok">✓</div>
+                            <div>
+                                <div class="validation-item__label">Campaign Consistency Validated</div>
+                                <div class="validation-item__detail">All channel mappings confirmed</div>
+                            </div>
+                        </div>
+
+                        <div class="validation-item">
+                            <div class="validation-item__icon validation-item__icon--ok">✓</div>
+                            <div>
+                                <div class="validation-item__label">Time Series Complete</div>
+                                <div class="validation-item__detail">No missing dates detected</div>
+                            </div>
+                        </div>
+
+                        <div class="validation-item">
+                            <div class="validation-item__icon validation-item__icon--ok">✓</div>
+                            <div>
+                                <div class="validation-item__label" id="validation-campaigns">Revenue Attribution Ready</div>
+                                <div class="validation-item__detail" id="validation-campaigns-detail">3 channels, 47 campaigns</div>
+                            </div>
+                        </div>
+
+                        <div class="validation-sync">
+                            <span>Last sync:</span>
+                            <span class="validation-sync__date" id="last-sync-date">—</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== SECTION 2: Budget Simulation + Operational Insights ===== -->
+            <div class="two-col">
+                <!-- Budget Simulation -->
+                <div class="card">
+                    <div class="budget-header">
+                        <h2 class="card__title">Budget Simulation</h2>
+                        <div style="text-align:right">
+                            <div class="budget-total__label">Total Monthly Budget</div>
+                            <div class="budget-total__value" id="total-budget">$95,000</div>
+                        </div>
+                    </div>
+                    <div class="budget-section" id="budget-channels">
+                        <!-- Dynamically populated per-channel budget sliders -->
+                    </div>
+                </div>
+
+                <!-- Operational Insights -->
+                <div class="card">
+                    <h2 class="card__title">Operational Insights</h2>
+                    <div class="insights-panel" id="insights-panel">
+                        <!-- Anomaly Interpretation -->
+                        <div class="insight-section">
+                            <div class="insight-section__title">
+                                <span class="icon">📈</span> Anomaly Interpretation
+                            </div>
+                            <div id="anomaly-insights">
+                                <p class="insight-text">Loading insights…</p>
+                            </div>
+                        </div>
+
+                        <!-- Operational Risks -->
+                        <div class="insight-section">
+                            <div class="insight-section__title">
+                                <span class="icon">⚠️</span> Operational Risks
+                            </div>
+                            <div id="risk-insights"></div>
+                        </div>
+
+                        <!-- Forecast Assumptions -->
+                        <div class="insight-section">
+                            <div class="insight-section__title">Forecast Assumptions</div>
+                            <ul class="assumptions-list" id="assumptions-list">
+                                <li>Historical period: 90 days</li>
+                                <li>Model confidence: 85% (high data quality)</li>
+                                <li>Next update: —</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== SECTION 3: Probabilistic Revenue Forecast Chart ===== -->
+            <div class="card forecast-chart-section">
+                <h2 class="card__title">Probabilistic Revenue Forecast</h2>
+                <p class="card__subtitle">Shaded regions represent confidence intervals (10th-90th percentile)</p>
+
+                <div class="chart-tabs" id="chart-tabs">
+                    <button class="chart-tab chart-tab--active" data-chart="revenue">Revenue Forecast</button>
+                    <button class="chart-tab" data-chart="roas">ROAS Forecast</button>
+                </div>
+
+                <div class="chart-area">
+                    <canvas id="chart-main"></canvas>
+                </div>
+            </div>
+
+            <!-- ===== SECTION 4: Revenue Contribution Table ===== -->
+            <div class="card">
+                <h2 class="card__title">Revenue Contribution by Channel &amp; Campaign</h2>
+                <p class="card__subtitle" id="contribution-subtitle">Forecast breakdown with uncertainty ranges</p>
+
+                <table class="contribution-table" id="contribution-table">
+                    <thead>
+                        <tr>
+                            <th>Channel</th>
+                            <th>Campaign Type</th>
+                            <th class="num">Campaigns</th>
+                            <th class="num">Revenue Range</th>
+                            <th class="num">ROAS Range</th>
+                            <th class="num">Contribution</th>
+                        </tr>
+                    </thead>
+                    <tbody id="contribution-tbody"></tbody>
+                </table>
+
+                <div class="contribution-total" id="contribution-total">
+                    <span class="contribution-total__label">Total across all channels</span>
+                    <div class="contribution-total__values">
+                        <span>Revenue: <strong id="total-revenue-range">—</strong></span>
+                        <span>Blended ROAS: <strong id="total-roas-range">—</strong></span>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="/static/charts.js"></script>
+    <script src="/static/app.js"></script>
+</body>
+</html>

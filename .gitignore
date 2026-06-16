@@ -8,3 +8,6 @@ data/*.parquet
 
 # Ignore virtual environment
 venv/
+
+# Ignore pdfs
+./*.pdf
